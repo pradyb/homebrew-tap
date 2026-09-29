@@ -45,6 +45,9 @@ class Sgh < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/sgh version")
+    # sgh refuses to run without a token, even for `version`; it only has to look like a ghp_ token.
+    with_env(SGH_TOKEN: "ghp_dummyTokenForBrewTest0123456789abcdef") do
+      assert_match version.to_s, shell_output("#{bin}/sgh version")
+    end
   end
 end
