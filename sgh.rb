@@ -5,21 +5,21 @@
 class Sgh < Formula
   desc "Command-line tool for GitHub across repositories and organizations"
   homepage "https://github.com/pradyb/sgh-cli"
-  version "1.4.0"
+  version "1.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/pradyb/sgh-cli/releases/download/v1.4.0/sgh_1.4.0_darwin_amd64.tar.gz"
-      sha256 "f2f337b280cb53201e0318c3712f46afabe90e69a3fc6a6fbf7647727b1d5ac9"
+      url "https://github.com/pradyb/sgh-cli/releases/download/v1.5.0/sgh_1.5.0_darwin_amd64.tar.gz"
+      sha256 "6685df81560c4c407ce43258f595f6704427a8ad68b01b3878c47957b0d17bed"
 
       define_method(:install) do
         bin.install "sgh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/pradyb/sgh-cli/releases/download/v1.4.0/sgh_1.4.0_darwin_arm64.tar.gz"
-      sha256 "1015d1f36213d6c99ed9cf7c3023dbbe1c4744e318a89fda90da105baffb77ee"
+      url "https://github.com/pradyb/sgh-cli/releases/download/v1.5.0/sgh_1.5.0_darwin_arm64.tar.gz"
+      sha256 "2d428aa41cd8fae54173de9e043c0bd422fda1ac96d032bab252bb9bd58236bb"
 
       define_method(:install) do
         bin.install "sgh"
@@ -29,15 +29,15 @@ class Sgh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pradyb/sgh-cli/releases/download/v1.4.0/sgh_1.4.0_linux_amd64.tar.gz"
-      sha256 "58a388e6bc8421defaf0604f3cc96cfae57fb750af1d54663096204ee6b54e5b"
+      url "https://github.com/pradyb/sgh-cli/releases/download/v1.5.0/sgh_1.5.0_linux_amd64.tar.gz"
+      sha256 "71fc98d821502257d71e5048a4f43f5926144e55eb65b01c9bf41a7f1cbb7243"
       define_method(:install) do
         bin.install "sgh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/pradyb/sgh-cli/releases/download/v1.4.0/sgh_1.4.0_linux_arm64.tar.gz"
-      sha256 "0af2216dc21023bd0ba7b280ad3d8b52998c2848140d610fcefb69b390f89aec"
+      url "https://github.com/pradyb/sgh-cli/releases/download/v1.5.0/sgh_1.5.0_linux_arm64.tar.gz"
+      sha256 "04ce860d5907c9861b731868622ee2da80e61fce01f703574316c51faffb8ece"
       define_method(:install) do
         bin.install "sgh"
       end
